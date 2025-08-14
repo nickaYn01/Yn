@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Wednesday Addams</title>
+    <button id="changeBgBtn">Change Background</button>
+</head>
+
+<body>
+    <h1>I'm Back</h1>
+    <p>Hi, my name is Wednesday Addams.</p>
+
+    <img src="./agnes.jpg" alt="Wednesday" class="profile-img">
+
+    <div class="section">
+        <h3>Class Expectations</h3>
+        <p>Don’t expect me to provide papers all the time — my patience also has its limits.</p>
+        <p>I'm talkative, depending on the people around me.</p>
+        <p>I will try hard to work on activities; practice makes perfect.</p>
+    </div>
+
+    <div class="section">
+        <h3>Subject Expectations</h3>
+        <p>Hoping that this subject will enhance and sharpen my knowledge.</p>
+        <p>Having some enjoyable activities.</p>
+        <p>To do more practice and gain new ideas.</p>
+    </div>
+
+    <div class="section">
+        <h3>Future PHP Projects</h3>
+        <p>Login and Registration</p>
+        <p>Online Bookstore / E-commerce Website</p>
+        <p>Bus Schedule System</p>
+    </div>
+
+    <script>
+    const backgrounds = [
+        './gif.gif',
+        './rumi.gif'
+        
+    ];
+
+    let currentBgIndex = 0;
+
+    document.getElementById('changeBgBtn').addEventListener('click', () => {
+        currentBgIndex = (currentBgIndex + 1) % backgrounds.length;
+        document.body.style.backgroundImage = `url('${backgrounds[currentBgIndex]}')`;
+    });
+</script>
+
+</body>
+</html>
